@@ -1,33 +1,40 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Numerics;
 
 namespace ChislMethod
 {
     class Program
-    {    public class Stroka
+    {
+        
+
+
+
+
+        class ChislMethod6 
         {
-            public double Y;
-            public double X1;
-            public double X2;
-            public double X3;
-            public double X4;
-            public Stroka(double Y, double X1, double X2, double X3, double X4)
-            {
-                this.Y = Y;
-                this.X1 = X1;
-                this.X2 = X2;
-                this.X3 = X3;
-                this.X4 = X4;
-            }
+        Function Mnk(double y, double x1, double x2)
+        {
+
+                double ea0, ea1, ea2;
+
+                Function F = new Function(ea0, ea1, ea2);
+                return F;
         }
-        class ChislMethod6
-        {
+
+
+
+            public class Function
+            {
+                public double a0, a1, a2;
+                Function(double ea0, double ea1, double ea2)
+            }
+
+
             public double[] Y = new double[25];
             public double[] X1 = new double[25];
             public double[] X2 = new double[25];
             public double[] X3 = new double[25];
             public double[] X4 = new double[25];
+
              public ChislMethod6(double [] eY, double[] eX1, double[] eX2, double[] eX3, double[] eX4)
             {
                 for(int i=0; i<25; i++)
@@ -48,12 +55,6 @@ namespace ChislMethod
             for (int i = 0; i < 25; i++)
             {
                 A[i] = i;
-            }
-            List<Stroka> nen = new List<Stroka>();
-            for (int i = 0; i < 25; i++)
-            {
-                Stroka kek = new Stroka(i, i, i,i,i);
-                nen.Add(kek);
             }
             ChislMethod6 F = new ChislMethod6(A, A, A, A, A);
             Console.WriteLine( F.X1[14]);
